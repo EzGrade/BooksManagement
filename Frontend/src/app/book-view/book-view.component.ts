@@ -22,15 +22,16 @@ export class BookViewComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.intIndex = parseInt(params['id'], 10);
-      this.bookService.updateSelectedBook();
-      this.selectedBook = this.bookService.selectedBook;
+      this.selectedBook = this.bookService.booksList.find(book => book.id === this.intIndex);
+      this.bookService.setSelectedBook(this.selectedBook);
     });
   }
 
   deleteBook() {
     if (this.selectedBook) {
+      let previousIndex = this.bookService.booksList.findIndex(book => book.id === this.selectedBook?.id);
       this.bookService.deleteBook(this.selectedBook);
-      this.router.navigate(['/']).then(r => r);
+      this.router.navigate(['/book/' + this.bookService.booksList[previousIndex].id]);
     }
   }
 }

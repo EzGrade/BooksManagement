@@ -1,4 +1,7 @@
 <div class="d-flex flex-row">
   <app-books-list></app-books-list>
   <router-outlet></router-outlet>
+  <div *ngIf="router.url === '/'" class="m-2">
+    <h3>Please select a book from the list</h3>
+  </div>
 </div>

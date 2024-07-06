@@ -11,7 +11,11 @@
       </div>
     </div>
   </div>
+  <div *ngIf="getBooksList().length == 0" class="d-flex justify-content-center align-items-center vh-100">
+    <p class="text-center">No books found</p>
+  </div>
   <div>
-    <button class="btn btn-primary fixed-bottom add-book m-2" (click)="this.router.navigate(['create'])">Add Book</button>
+    <button class="btn btn-primary fixed-bottom add-book m-2" (click)="this.router.navigate(['create'])">Add Book
+    </button>
   </div>
 </div>
