@@ -50,6 +50,9 @@ __Note:__ It's highly recommended to use Docker to run the project.
     python manage.py migrate
     python manage.py runserver
     ```
+   *After this step, you already can access the backend API using the following URL: `http://localhost:8000/swagger`*
+
+
 5. Navigate to the frontend folder and run the following commands
     ```bash
     npm install
