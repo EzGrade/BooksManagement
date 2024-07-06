@@ -1,0 +1,27 @@
+<div>
+  <form (ngSubmit)="saveBook()" [formGroup]="bookForm">
+    <div class="mb-3">
+      <label for="InputTitle" class="form-label">Title</label>
+      <input type="text" class="form-control" id="InputTitle" formControlName="title">
+    </div>
+    <div class="mb-3">
+      <label for="InputAuthor" class="form-label">Author</label>
+      <input type="text" class="form-control" id="InputAuthor" formControlName="author">
+    </div>
+    <div class="mb-3">
+      <label for="InputPublishedDate" class="form-label">Published Date</label>
+      <input type="date" class="form-control" id="InputPublishedDate" formControlName="published_date">
+    </div>
+    <div class="mb-3">
+      <label for="InputISBN" class="form-label">ISBN</label>
+      <input type="text" class="form-control" id="InputISBN" formControlName="isbn">
+    </div>
+    <div class="mb-3">
+      <label for="InputPages" class="form-label">Pages</label>
+      <input type="number" class="form-control" id="InputPages" formControlName="pages">
+    </div>
+    <div class="justify-content-between w-100 d-flex">
+      <button type="submit" class="btn btn-success">Create</button>
+    </div>
+  </form>
+</div>

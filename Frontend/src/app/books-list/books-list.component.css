@@ -1,0 +1,30 @@
+.card {
+  transition: all 0.2s;
+  margin-bottom: .5rem;
+  width: 250px;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  scale: 0.95;
+}
+
+.card-selected {
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  scale: 0.95;
+  transition: all 0.2s;
+}
+
+.card-selected:hover {
+  box-shadow: none;
+  scale: none;
+}
+
+.last-card {
+  margin-bottom: 50px !important;
+}
+
+.add-book {
+  cursor: pointer;
+  width: 250px;
+}

@@ -1,0 +1,11 @@
+<div *ngIf="selectedBook" class="mt-2 ms-2 d-flex flex-column book-content">
+  <h2>{{ selectedBook.title }} by {{ selectedBook.author }}</h2>
+  <p>Released: {{ selectedBook.published_date }}</p>
+  <p>Isbn: {{ selectedBook.isbn }}</p>
+  <p>Pages: {{ selectedBook.pages }}</p>
+  <p>Book id: {{ selectedBook.id }}</p>
+  <div class="justify-content-between d-flex">
+    <button class="btn btn-primary" (click)="router.navigate(['book/' + selectedBook.id + '/edit'])">Edit</button>
+    <button class="btn btn-danger" (click)="deleteBook()">Delete</button>
+  </div>
+</div>

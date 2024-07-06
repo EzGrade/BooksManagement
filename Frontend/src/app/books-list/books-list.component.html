@@ -1,0 +1,17 @@
+<div class="overflow-auto vh-100 m-0 object-fit-contain p-2" style="width: 270px;">
+  <div *ngFor="let book of getBooksList(); let i = index" class="d-flex card-div" (click)="selectBook(book)">
+    <div class="card" [ngClass]="{'card-selected': isBookSelected(book), 'last-card': i == getBooksList().length - 1}">
+      <div class="card-body">
+        <p class="card-title">
+          {{ book.title }} by {{ book.author }}
+        </p>
+        <p class="card-text">
+          {{ book.published_date }} - {{ book.pages }} pages
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary fixed-bottom add-book m-2" (click)="this.router.navigate(['create'])">Add Book</button>
+  </div>
+</div>
